@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Court</title>
+<link rel="stylesheet" href="Style User.css">
+</head>
+<body>
+
+<header>
+  <h1>🍽 Food Court</h1>
+  <button id="darkToggle">🌙</button>
+</header>
+
+<p id="tableInfo" style="color: aliceblue;"></p>
+
+<div class="glass">
+
+<h2 id="title">🏪 Shops</h2>
+<button id="backBtn" onclick="showShops()">⬅ Back</button>
+
+<div id="menu" class="grid"></div>
+
+<hr>
+
+<h2>🛒 Cart</h2>
+<div id="cart">No items</div>
+<p id="total">Total: ₹0</p>
+
+<select id="payment">
+  <option>Cash</option>
+  <option>UPI</option>
+  <option>Card</option>
+</select>
+
+<button onclick="openBill()">Place Order</button>
+
+</div>
+
+<!-- BILL MODAL -->
+<div id="billModal" class="modal">
+  <div class="modal-content glass">
+    <h2>🧾 Bill</h2>
+    <div id="billItems"></div>
+    <p id="billTotal"></p>
+    <button onclick="confirmOrder()">Confirm Order</button>
+    <button onclick="closeBill()">Cancel</button>
+  </div>
+</div>
+
+<script src="Script User.js"></script>
+</body>
+</html>
